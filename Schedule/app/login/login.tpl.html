@@ -1,0 +1,18 @@
+﻿<div class="container">
+    <br />
+    <br />
+    <form>
+        <div class="row">
+            <span>שם העובד:&nbsp;</span><input ng-model="loginVm.username" required />
+        </div>
+        <br />
+        <div class="row">
+            <span>סיסמא:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="password" ng-model="loginVm.password" required />
+        </div>
+        <br />
+        <button ng-click="loginVm.login()" type="submit" class="btn btn-default btn-login">התחבר</button>
+        <br />
+        <br />
+        <span>{{loginVm.error}}</span>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+﻿body {
+    $font-login: 18px;
+    $basic-color: #fcfcfc;
+
+    @mixin button-login {
+        background-color: #1e1d1d;
+        font-style: inherit;
+        font-family: sans-serif;
+        color: $basic-color;
+        font-size: $font-login;
+    }
+
+    .btn-login {
+        @include button-login;
+    }
+}

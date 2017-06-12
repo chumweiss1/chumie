@@ -1,0 +1,36 @@
+﻿<div ng-show="reportVm.user" class="reports-section">
+    <input type="text" class="form-control display-inline" datepicker-popup="MMM-yyyy" ng-model="reportVm.datetime" 
+           is-open="opened" datepicker-options="{minMode: 'month'}" datepicker-mode="'month'" />
+    <span class="input-group-btn display-inline">
+        <button type="button" class="btn btn-default" ng-click="reportVm.open($event)">
+            <i class="glyphicon glyphicon-calendar"></i>
+        </button>
+    </span>
+    <br />
+    <table class="table table-report" >
+        <thead>
+            <tr>
+                <th class="col-md-3 "><span class="pull-right">תאריך</span></th>
+                <th class="col-md-3 "><span class="pull-right">שעת כניסה</span></th>
+                <th class="col-md-3 "><span class="pull-right">שעת יציאה</span></th>
+                <th class="col-md-3 "><span class="pull-right">סה"כ שעות יומיות</span></th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="date in reportVm.user.schedules | monthFilter:reportVm.datetime">
+            <tr>
+                <td class="col-md-3">
+                    {{date.date}}
+                </td>
+                <td class="col-md-3">
+                    {{date.timeStart}}
+                </td>
+                <td class="col-md-3">
+                    {{date.timeEnd}}
+                </td>
+                <td class="col-md-3">
+                    {{reportVm.totalHours(date.timeStart,date.timeEnd) }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

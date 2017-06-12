@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "app/sch.app.css",
+    "inputFile": "app/sch.app.scss"
+  },
+  {
+    "outputFile": "app/sign/sch.sign.css",
+    "inputFile": "app/sign/sch.sign.scss"
+  },
+  {
+    "outputFile": "app/login/sch.login.css",
+    "inputFile": "app/login/sch.login.scss"
+  },
+  {
+    "outputFile": "app/report/sch.report.css",
+    "inputFile": "app/report/sch.report.scss"
+  },
+  {
+    "outputFile": "app/style.vars.css",
+    "inputFile": "app/style.vars.scss"
+  },
+  {
+    "outputFile": "app/common/directives/calendar.drt.js",
+    "inputFile": "app/common/directives/calendar.drt.jsx"
+  }
+]

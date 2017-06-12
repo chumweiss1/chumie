@@ -1,0 +1,25 @@
+﻿@import "../style.vars.scss";
+
+.sign-section {
+    @mixin button-base {
+        padding: 0px 40px;
+        background-color: $basic-color;
+        font-style: inherit;
+        font-family: sans-serif;
+        color: white;
+        border-radius: 50px;
+        margin-left: 120px;
+        margin-right: 120px;
+        margin-top: 50px;
+        font-size: $font-button;
+    }
+
+    .sign-button {
+        @include button-base;
+    }
+    .btn:hover{
+         color: #ececec!important;
+
+    }
+
+}

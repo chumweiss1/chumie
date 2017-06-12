@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML >
+<html ng-app="schApp">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{{title}}</title>
+
+    <link href="../Content/bootstrap.css" rel="stylesheet" />    
+    <link href="../Content/Site.css" rel="stylesheet" />
+    <link href="../Content/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="../bower_components/angular-ui-clock/dist/angular-clock.css" rel="stylesheet" />
+    <link href="sch.app.min.css" rel="stylesheet" />
+    <link href="sign/sch.sign.min.css" rel="stylesheet" />
+    <link href="login/sch.login.min.css" rel="stylesheet" />
+    <link href="report/sch.report.min.css" rel="stylesheet" />
+</head>
+<body dir="rtl">
+    <div class="navbar navbar-inverse navbar-fixed-top" dir="rtl">
+        <div class="container" dir="rtl">
+            <h1 dir="rtl" class="pull-right navbar-brand">דוח שעות</h1>&nbsp;&nbsp;&nbsp;
+            <h4 dir="rtl" class="navbar-brand" ng-show="user">שלום {{user.userName}}</h4>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li ng-show="user"><a href="#/login">כניסה</a></li>
+                    <li ng-show="user"><a href="#/report">דוח חודשי</a></li>
+                    <li ng-show="user"><a href="#/sign">החתמה</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="container body-content align-center">
+        <div ng-class=["ds-clock"]>
+            <ds-widget-clock></ds-widget-clock>
+        </div>
+        <div ng-view></div>
+    </div>
+
+
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/angular-animate.js"></script>
+    <script src="../Scripts/angular-ui/ui-bootstrap.js"></script>
+    <script src="../Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-ui-clock/dist/angular-clock.js"></script>
+
+
+    <script src="../Scripts/lodash.js"></script>
+
+    <script src="app.mdl.js"></script>
+    <script src="app.route.js"></script>
+    <script src="sign/sign.ctrl.js"></script>
+    <script src="report/report.ctrl.js"></script>
+    <script src="common/filters/sch.fltr.js"></script>
+    <script src="login/login.ctrl.js"></script>
+    <script src="common/services/sch.srv.js"></script>-
+    <script src="common/directives/sch.drt.js"></script>
+</body>
+</html>
